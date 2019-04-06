@@ -1,27 +1,8 @@
 {
-  "name": "mernstack",
+  "name": "MernStack",
   "version": "1.0.0",
-  "description": "List for shopping",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/usmanali598/ShoppingList.git"
-  },
-  "keywords": [
-    "MERN",
-    "Shopping",
-    "List"
-  ],
-  "author": "Usman Ali",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/usmanali598/ShoppingList/issues"
-  },
-  "homepage": "https://github.com/usmanali598/ShoppingList#readme",
+  "description": "",
+  "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
@@ -30,5 +11,14 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC"
 }
