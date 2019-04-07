@@ -6,3 +6,19 @@ export const getItems = () =>
         type: GET_ITEMS
     }
 }
+
+export const deleteItem = ( id ) =>
+{
+    return {
+        type: DELETE_ITEM,
+        payload: id
+    }
+}
+//the whole item as payload
+export const addItem = ( item ) =>
+{
+    return {
+        type: ADD_ITEM,
+        payload: item
+    }
+}
