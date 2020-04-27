@@ -23,8 +23,9 @@ NPM packages:
 1. git clone https://github.com/usmanali598/ShoppingList.git
 2. cd ShoppingList
 3. npm install
-4. npm run client-install
-5. npm run dev
+4. local database connection e.g "mongoURI": "mongodb://localhost:27017/items"
+5. npm run client-install
+6. npm run dev
 ```
 ##### `Scripts` 
 npm install --prefix client ( instead of cd client & npm install)

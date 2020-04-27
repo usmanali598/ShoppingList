@@ -1,12 +1,17 @@
 const express = require( 'express' );
 const mongoose = require( 'mongoose' );
 const path = require('path');
+const config = require('config');
+
 const app = express();
 
+//Bodyparser Middleware
 app.use( express.json() )
 
 //db connection
-const db = require( './config/keys' ).mongoURI;
+const db = config.get('mongoURI');
+// const db = require('./config/keys').mongoURI;
+
 // Connect to Mongo
 mongoose
     .connect( db, {
