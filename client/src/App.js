@@ -7,8 +7,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './store';
-class App extends Component
-{
+import {loadUser} from './actions/authActions';
+class App extends Component{
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
   render()
   {
     return (
