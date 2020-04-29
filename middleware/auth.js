@@ -8,14 +8,14 @@ function auth(req, res, next) {
     if (!token) return res.status(401).json({ msg: 'No token, authorization denied!' });
 
     try {
-            //Verify token
-    const decoded = jwt.verify(token, config.get('jwtSecret'));
+        //Verify token
+        const decoded = jwt.verify(token, config.get('jwtSecret'));
 
-    //Add user from payload
-    req.user = decoded;
-    next();
+        //Add user from payload
+        req.user = decoded;
+        next();
     } catch (e) {
-        res.status(400).json({msg:'token is not valid'})
+        res.status(400).json({ msg: 'Token is not valid' })
     }
 
 }
