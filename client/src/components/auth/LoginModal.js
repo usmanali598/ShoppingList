@@ -6,7 +6,7 @@ import { login } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 
 
-class RegisterModal extends Component {
+class LoginModal extends Component {
     state = {
         modal: false,
         email: '',
@@ -54,6 +54,14 @@ class RegisterModal extends Component {
     onSubmit = e => {
         e.preventDefault();
 
+        const { email, password } = this.state;
+
+        const user = {
+            email, password
+        };
+
+        //Attempt to login
+        this.props.login(user);
     };
 
     render() {
@@ -88,4 +96,4 @@ const mapStateToProps = state => ({
     error: state.error
 })
 
-export default connect(mapStateToProps, { login, clearErrors })(RegisterModal)
+export default connect(mapStateToProps, { login, clearErrors })(LoginModal)
