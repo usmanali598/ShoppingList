@@ -33,6 +33,7 @@ class LoginModal extends Component {
             }
         }
 
+
         //if authenticated, close modal
         if (this.state.modal) {
             if (isAuthenticated) {

@@ -92,7 +92,6 @@ export const tokenConfig = getState => {
 
     //Get token from localstorage
     const token = getState().auth.token;
-
     //Headers
     const config = {
         headers: {
