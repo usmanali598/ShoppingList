@@ -39,3 +39,4 @@ npm run dev: for running both backend & frontend servers
 
 ## Note:
 Please, use your own mongo db user name and password to connect to backend.
+"mongoURI": "PUT_YOUR_MONGO_URI",
